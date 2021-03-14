@@ -1,1 +1,3 @@
 # Java-NetWork
+## 为什么可以ping的通的网站，用Java的isReachable返回的是false？
+## 通过wireshark发现isReachable发送的并不是ICMP也就是ping所使用的报文，而是TCP报文，并且默认是7端口，所以需要打开所需要判断是否Reachable主机的TCP7端口，并且要足够的时延才可以返回true
